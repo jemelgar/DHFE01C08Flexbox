@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #9c9c9c;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: space-around;
+background-color: #dfdfdf;
+width: 90%;
+margin: 0 auto;
+}
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+}
+.brand{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 10px;
+}
+.brand-name{
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.text-important{
+    color: red;
+}
+.text-front{
+    color: green;
+}
+.mobile-menu{
+    margin-right: 10px;
+    font-size: 24px;
+}
+ul{
+    list-style-type: none;
+    font-weight: 100;
+}
+.nav-desktop{
+    display: none;
+}
+.nav-desktop ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+main{
+    margin-top: 10px;
+}
+.featured-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+
+}
+.main-offer, .pizza-ranking{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 5px;
+    min-height: 300px;
+}
+.main-offer{
+    display: flex;
+    justify-content: center;
+}
+.main-offer img{
+    display: block;
+    margin: 0;
+    width: 100%;
+    border-radius: 5px;
+}
+.offer-text{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+.pizza-ranking{
+    order: -1;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.pizza-ranking h2{
+    width: 100%;
+    text-align: center;
+    max-height: 50px;
+    margin-top: 15px;
+}
+.ranking-items{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+.ranking-title{
+    margin: 15px 0;
+    font-size: 20px;
+}
+.nav-bottom{
+    padding: 0 10px;
+}
+
+
+/* MEDIA QUERIES*/
+@media (min-width:769px){
+    .pizza-ranking, .main-offer{
+        order: 0;
+        width: 45%;
+        margin: 0 5px;
+    }
+    .nav-desktop{
+        display: block;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .nav-bottom{
+        order: -1;
+    }
+}
